@@ -7,6 +7,7 @@ import 'hammerjs';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { routes } from './app.router';
+import { MyservicenameService } from './myservicename.service';
 
 @NgModule({
   declarations: [
@@ -18,9 +19,10 @@ import { routes } from './app.router';
     FormsModule,
     MaterialModule.forRoot(),
     HttpModule,
-    routes
+    routes,
+    MyservicenameService
   ],
-  providers: [],
+  providers: [MyservicenameService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
